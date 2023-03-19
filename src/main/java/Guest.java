@@ -12,6 +12,13 @@ public class Guest {
         this.gender = gender;
         this.age = age;
     }
+    public Guest(String name, String city, int gender, int age) {
+
+        this.name = name;
+        this.city = city;
+        this.gender = gender;
+        this.age = age;
+    }
 
     public int getId() {
         return id;

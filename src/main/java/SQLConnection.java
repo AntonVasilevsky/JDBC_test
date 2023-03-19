@@ -31,13 +31,15 @@ public class SQLConnection {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASS);
              Statement statement = connection.createStatement()){
 
-            statement.execute("INSERT INTO guests (name, city, age) VALUES ('Luk', 'Tatuin', '24')");
+          /*  statement.execute("INSERT INTO guests (name, city, age) VALUES ('Luk', 'Tatuin', '24')");
             int a = statement.executeUpdate("update guests set age = 25 where name = 'Luk'");
          // sends 1 request instead of 3
             statement.addBatch("INSERT INTO guests (name, city, age) VALUES ('Luk', 'Tatuin', '24')");
             statement.addBatch("INSERT INTO guests (name, city, age) VALUES ('Tom', 'House', '4')");
-            statement.addBatch("INSERT INTO guests (name, city, age) VALUES ('Jerry', 'House', '2')");
-
+            statement.addBatch("INSERT INTO guests (name, city, age) VALUES ('Jerry', 'House', '2')");*/
+            statement.addBatch("update guests set name = 'Ivan' where id = '5'");
+            statement.addBatch("update guests set city = 'RoOme' where id = '5'");
+            statement.addBatch("update guests set gender = '1' where id = '5'");
             statement.executeBatch();
             statement.clearBatch();
 
